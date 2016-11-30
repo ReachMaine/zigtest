@@ -1,6 +1,7 @@
 <?php
-	require_once(get_stylesheet_directory().'/custom/woocommerce.php'); 
-	require_once(get_stylesheet_directory().'/custom/ea_expand_image.php'); 
+	require_once(get_stylesheet_directory().'/custom/woocommerce.php');
+	require_once(get_stylesheet_directory().'/custom/ea_expand_image.php');
+	require_once(get_stylesheet_directory().'/custom/our_team_dir.php'); 
 	function theme_enqueue_styles() {
 	    wp_enqueue_style( 'avada-parent-stylesheet', get_template_directory_uri() . '/style.css' );
 	    //wp_register_script('ea_expand_image', get_stylesheet_directory_uri().'/custom/ea_expand_image.js');
@@ -9,7 +10,7 @@
 
 	}
 	add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
- 	
+
 
 	function avada_lang_setup() {
 		$lang = get_stylesheet_directory() . '/languages';
@@ -27,10 +28,10 @@
 	function mysite_opengraph_image_size($val) {
 		return 'facebook_share';
 	}
-	
-		// contact form 7 fallback for date field 
+
+		// contact form 7 fallback for date field
 	add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
-	
+
 	/*****  change the login screen logo ****/
 	function my_login_logo() { ?>
 		<style type="text/css">
